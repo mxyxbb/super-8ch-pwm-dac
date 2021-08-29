@@ -15,16 +15,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if (htim == (&htim6))//ÖÐ¶ÏÆµÂÊÎª25kHz
     {
-			count1++;
-			wave_gen();
-			if(count1>25)//1ms
-			{
-				music_Play(14);
-				count1=0;
-			}	
-
-//				testfunc();
-
-
-		}
+		count1++;
+		wave_gen();
+		if(count1>25)//1ms
+		{
+			music_Play(14);
+			count1=0;
+		}	
+	}
 }
